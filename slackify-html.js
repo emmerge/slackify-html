@@ -91,19 +91,19 @@ function walkTableHead(dom) {
       else if ('th' === el.name) {
         var header = walkTableHead(el.children);
         headers.push(header);
-        out += '| ' + header + ' ';
+        out += ' ' + header + ' ';
       }
     });
     if (headers.length > 0) {
-      out += ' |\n';
+      out += '\n';
       headers.forEach(function (item) {
-        out += '| ';
+        out += ' ';
         for (i = 0; i < item.length; i++) {
           out += '-';
         }
         out += ' ';
       });
-      out += ' |\n';
+      out += '\n';
     }
   }
 
@@ -118,10 +118,10 @@ function walkTableBody(dom) {
         out += el.data;
       }
       else if ('td' === el.name) {
-        out += '| ' + walk(el.children) + ' ';
+        out += walk(el.children) + ' ';
       }
       else if ('tr' === el.name) {
-        out += walkTableBody(el.children) + '|\n';
+        out += walkTableBody(el.children) + '\n';
       }
     });
   }
