@@ -179,7 +179,8 @@ function walk(dom, nesting) {
             break;
           case 'img':
             var alt = el.attribs.alt;
-            out += '<Inline Image' + (alt !== '' ? '('+alt+')' : '') + ': ' + el.attribs.src + '>';
+            if (alt)
+              out += alt;
             break;
           default:
             out += walk(el.children);
