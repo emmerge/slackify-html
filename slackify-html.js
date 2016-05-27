@@ -67,6 +67,9 @@ function walkTable(dom) {
         else if ('tbody' === el.name) {
           out += walkTableBody(el.children);
         }
+        else if ('tr' === el.name) {
+          out += walkTableBody(el.children) + '\n';
+        }
       }
     });
   }
