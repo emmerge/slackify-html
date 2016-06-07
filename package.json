@@ -1,5 +1,5 @@
 {
-  "name": "slackify-html",
+  "name": "@emmerge/slackify-html",
   "version": "1.0.0",
   "description": "convert simple html to slack markdown",
   "main": "slackify-html.js",
